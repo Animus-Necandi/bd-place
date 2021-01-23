@@ -5,9 +5,7 @@
 import albums from "../data/albums.js";
 import series from "../data/series.js";
 import auteurs from "../data/auteurs.js";
-// console.log(auteurs);
-// console.log(albums.get("2").titre);
-// console.log(auteurs.get("8").nom);
+
 
 
 let id = "";
