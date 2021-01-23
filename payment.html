@@ -193,7 +193,7 @@
                             </div>
 
                            
-                            <button class="payment-submit align-self-center w-0" type="button" onclick="orderValidation()"></a>VALIDER</button>
+                            <button class="payment-submit align-self-center w-0 " type="button" onclick="orderValidation()"></a>VALIDER</button>
                            
 
                         </form>
@@ -255,13 +255,13 @@
         user_citys= localStorage.getItem('user_city');
 
         if(user_citys == null || user_address == null){
-            console.log('arrivons nous ici?');
+           
             user_addres = "Editer pour saisir";
             user_city = " votre adresse ";
          
         }
         else if(user_citys && user_address){
-            console.log('arrivon nous ici?');
+           
             user_addres = user_address;
             user_city = user_citys;
         }
@@ -269,12 +269,12 @@
 
         user_addresd =user_addres;
         user_cityd=user_city;
-        console.log(user_addresd);
+       
 
-       document.getElementById("user_firstname").innerHTML = user_firstname;
-       document.getElementById("user_name").innerHTML = user_name;  
-       document.getElementById("user_addres").value = user_addres;
-       document.getElementById("user_city").value = user_city;
+    //    document.getElementById("user_firstname").innerHTML = user_firstname;
+    //    document.getElementById("user_name").innerHTML = user_name;  
+    //    document.getElementById("user_addres").value = user_addres;
+    //    document.getElementById("user_city").value = user_city;
      
 
         

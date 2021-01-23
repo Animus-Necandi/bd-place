@@ -64,7 +64,7 @@
                                     <ul id="cart-dropdown" class="cart-dropdown dropdown-menu pull-right">
                                       <li id="empty-cart-msg"><a>Votre panier est vide</a></li>
                                       <li class="divider hidden"></li>
-                                      <li class="go-to-cart d-flex justify-content-center hidden"><button class="btn btn-primary center-block btnPanier">Voir le panier</button></li>
+                                      <li class="go-to-cart d-flex justify-content-center hidden"><button class="btn btn-primary center-block btnPanier" onclick="Connect()">Voir le panier</button></li>
                                     </ul>
                                 </div>
                             </li>
@@ -211,6 +211,7 @@
     <script src="./js/pageCatalogue.js" type="module"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script defer src="./js/panier.js"></script>
+    <script defer src="./js/connect.js"></script>
 
   <!--Concerne la recherche-->
     <script>
@@ -264,15 +265,15 @@ function w3RemoveClass(element, name) {
 }
 
 // Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
+// var btnContainer = document.getElementById("myBtnContainer");
+// var btns = btnContainer.getElementsByClassName("btn");
+// for (var i = 0; i < btns.length; i++) {
+//   btns[i].addEventListener("click", function() {
+//     var current = document.getElementsByClassName("active");
+//     current[0].className = current[0].className.replace(" active", "");
+//     this.className += " active";
+//   });
+// }
     
     
     

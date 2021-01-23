@@ -30,7 +30,7 @@ let qtArray = [];
 let prixArray = [];
 let titreArray = [];
 let iterator1 = bd.entries(1);
-let totalFinal = "";
+let totalFinal = 0;
 
 
 for (let i = 0; i <= recupBoucle.length - 2; i++) {
@@ -358,6 +358,8 @@ function NewTotalFinal() {
 
     totalCommande.innerHTML = `Total TTC : ${totalFinal} €`;
     TotalFinal.appendChild(totalCommande);
+    sessionStorage.setItem("user_cart", totalFinal);
+    console.log(totalFinal)
 
 
 
@@ -403,16 +405,15 @@ const TotalFinal = document.getElementById('total');
 let totalCommande = document.createElement("p");
 totalCommande.innerHTML = `Total TTC : ${TotalTTCFacture} €`;
 TotalFinal.appendChild(totalCommande);
+sessionStorage.setItem("user_cart", TotalTTCFacture);
 
 //Bouton Valider
 function Validation() {
 
-    sessionStorage.setItem("user_cart", totalFinal);
     window.event.returnValue = false;
     window.location = './payment.html';
 
 }
-
 
 
 

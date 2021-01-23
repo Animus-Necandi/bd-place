@@ -1,5 +1,5 @@
 
-
+sessionStorage.setItem('user_connect', 'false');
 
 jQuery(function () {
     'use strict';

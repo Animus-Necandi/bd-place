@@ -6,8 +6,8 @@
 //en attendant que toutes les pages soient communes
 // localStorage.setItem("user_firstname", "Nissim");
 // localStorage.setItem("user_name", "Djerouri");
-localStorage.setItem("user_addres", "56 rue des daltoniens");
-localStorage.setItem("user_city", "75000 Silicon Valley");
+// localStorage.setItem("user_addres", "N° et Nom de rue");
+// localStorage.setItem("user_city", "Code postal, Ville");
 // sessionStorage.setItem("user_cart", "120");
 
 
