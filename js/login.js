@@ -41,7 +41,7 @@ function store() {
 //checking
 function check() {
 
-    sessionStorage.setItem('user_connect', 'true')
+
     localStorage.setItem("user_addres", "N° et Nom de rue");
     localStorage.setItem("user_city", "Code postal, Ville");
     let storedName = localStorage.getItem('user_mail');

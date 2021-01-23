@@ -2,49 +2,6 @@
 let regDate = new RegExp("^202[0-5]\-(0[0-9]|1[0-2])\-(0[0-9]|[1-2][0-9]|3[0-1])$");
 let timeChoice = ""
 
-//contrôle saisie date
-
-// let timeChoiceAm = document.getElementsByClassName('am-time')[0].getElementsByClassName('time')[0].innerHTML;
-// let timeChoiceAm2 = document.getElementsByClassName('am-time')[0].getElementsByClassName('time')[1].innerHTML;
-// let timeChoiceAm3 = document.getElementsByClassName('am-time')[0].getElementsByClassName('time')[2].innerHTML;
-// let timeChoiceAm4 = document.getElementsByClassName('am-time')[0].getElementsByClassName('time')[3].innerHTML;
-// let timeChoicePm = document.getElementsByClassName('pm-time')[0].getElementsByClassName('time')[0].innerHTML;
-// let timeChoicePm1 = document.getElementsByClassName('pm-time')[0].getElementsByClassName('time')[1].innerHTML;
-// let timeChoicePm2 = document.getElementsByClassName('pm-time')[0].getElementsByClassName('time')[2].innerHTML;
-// let timeChoicePm3 = document.getElementsByClassName('pm-time')[0].getElementsByClassName('time')[3].innerHTML;
-// let timeChoicePm4 = document.getElementsByClassName('pm-time')[0].getElementsByClassName('time')[4].innerHTML;
-
-
-
-//---------------------------------------
-// let k = document.getElementsByClassName('delivery-time')[1].getElementsByClassName('time')[1].innerHTML;
-// console.log(k);
-// let f = 0;
-// let g = 0;
-
-// function test() {
-
-//     let DeliveryTimeChoice = "";
-//     let DeliveryTime = "";
-
-//     for (i = 0; i <= DeliveryTime.length; i++) {
-//         DeliveryTime = document.getElementsByClassName('delivery-time')[f];
-//         f++;
-//         i++;
-//         console.log(f);
-//le 2eme boucle devrait repartir de 0 quand i change
-//         for (b = 0; b <= DeliveryTimeChoice.length; b++) {
-//             DeliveryTimeChoice = DeliveryTime.getElementsByClassName('time')[g].innerHTML;
-//             g++;
-//             b++;
-//             console.log(DeliveryTimeChoice);
-//         }
-
-//     }
-// }
-
-// test()
-//     ;
 
 //--------------------------------------
 let zeroOn = true;

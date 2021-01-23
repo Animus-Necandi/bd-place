@@ -139,7 +139,7 @@
                 </div>
 
                 <div class="payment-control border border-dark m-5 p-5">
-
+                                
                     <div class="billing-addres border border-dark mb-5 d-flex flex-wrap justify-content-around">
                         <p class="col-8">ADRESSE DE FACTURATION:</p>
                         <p class="edit billingEdit col-4" onclick="edit(billingEdit)">EDIT</p>
@@ -253,7 +253,7 @@
         user_firstname = localStorage.getItem('user_firstname');
         user_name = localStorage.getItem('user_name');
        
-        user_address = localStorage.getItem('user_addres');
+        user_address = localStorage.getItem('user_address');
         user_citys= localStorage.getItem('user_city');
 
         if(user_citys == null || user_address == null){
@@ -275,8 +275,8 @@
 
        
 
-        sessionStorage.setItem('user_cityd',user_cityd);
-        sessionStorage.setItem('user_addresd',user_addresd);
+        localStorage.setItem('user_cityd',user_cityd);
+        localStorage.setItem('user_addresd',user_addresd);
 
         document.getElementById("user_cityd").value = user_cityd;
         document.getElementById('user_addresd').value = user_addresd;
@@ -317,6 +317,7 @@
        
          
        </script>
+        <script src="./js/main.js"></script>
   
 </body>
 </html>

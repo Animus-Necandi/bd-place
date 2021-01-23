@@ -1,14 +1,4 @@
 
-//Création data clients [Nom,Prénom,Adresse,Mail]
-// let userA = ["Dupont", "Nicole", "3 rue des pivoines", "75000 Paris", "dupont@afpa.fr", "mdp"];
-// let userB = ["Castaldon", "Philippe", "145 rue de la colombe", "18000 Bourges", "castaldon@afpa.fr", "mdp"];
-
-//en attendant que toutes les pages soient communes
-// localStorage.setItem("user_firstname", "Nissim");
-// localStorage.setItem("user_name", "Djerouri");
-// localStorage.setItem("user_addres", "N° et Nom de rue");
-// localStorage.setItem("user_city", "Code postal, Ville");
-// sessionStorage.setItem("user_cart", "120");
 
 
 let b = document.body;
@@ -33,11 +23,7 @@ let regDate = new RegExp("^202[0-5]\-(0[0-9]|1[0-2])\-(0[0-9]|[1-2][0-9]|3[0-1])
 let regCVV = new RegExp("^[0-9]{3,4}$");
 
 
-// //Mise en Sessionstorage de l'userA
-// sessionStorage.setItem("user_firstname", userA[0]);
-// sessionStorage.setItem("user_name", userA[1]);
-// sessionStorage.setItem("user_addres", userA[2]);
-// sessionStorage.setItem("user_city", userA[3]);
+
 
 
 //Gestion Checkbox-Affichage adresse de livraison
@@ -48,10 +34,10 @@ checkbox.addEventListener('change', function () {
 
         check_btn = true;
 
-        user_addres = sessionStorage.getItem('user_addres');
-        user_city = sessionStorage.getItem('user_city');
-        sessionStorage.setItem('user_addresd', user_addres);
-        sessionStorage.setItem('user_cityd', user_city);
+        user_addres = localStorage.getItem('user_address');
+        user_city = localStorage.getItem('user_city');
+        localStorage.setItem('user_addresd', user_addres);
+        localStorage.setItem('user_cityd', user_city);
         document.getElementById("user_cityd").value = user_city;
         document.getElementById('user_addresd').value = user_addres;
 
@@ -136,10 +122,10 @@ function closeEdit() {
     let NewAddresDelivery = regString.test(NewUserAddresDelivery);
     let NewCityDelivery = regString.test(NewUserCityDelivery);
 
-    user_addres = sessionStorage.getItem('user_addres');
-    user_city = sessionStorage.getItem('user_city');
-    user_addresd = sessionStorage.getItem('user_addresd');
-    user_cityd = sessionStorage.getItem('user_cityd');
+    user_addres = localStorage.getItem('user_address');
+    user_city = localStorage.getItem('user_city');
+    user_addresd = localStorage.getItem('user_addresd');
+    user_cityd = localStorage.getItem('user_cityd');
 
 
 
@@ -147,14 +133,14 @@ function closeEdit() {
 
         console.log('close fact');
 
-        sessionStorage.setItem('user_addres', NewUserAddres);
-        sessionStorage.setItem('user_city', NewUserCity);
+        localStorage.setItem('user_address', NewUserAddres);
+        localStorage.setItem('user_city', NewUserCity);
 
 
         user_addresd = NewUserAddres;
         user_cityd = NewUserCity;
-        sessionStorage.setItem('user_addresd', user_addresd);
-        sessionStorage.setItem('user_cityd', user_cityd);
+        localStorage.setItem('user_addresd', user_addresd);
+        localStorage.setItem('user_cityd', user_cityd);
         document.getElementById("user_cityd").value = user_cityd;
         document.getElementById('user_addresd').value = user_addresd;
 
@@ -168,14 +154,14 @@ function closeEdit() {
     else if (NewAddresDelivery && NewCityDelivery && (NewUserAddresDelivery != user_addresd || NewUserCityDelivery != user_cityd)) {
 
         console.log('close liv');
-        sessionStorage.setItem('user_addresd', NewUserAddresDelivery);
-        sessionStorage.setItem('user_cityd', NewUserCityDelivery);
+        localStorage.setItem('user_addresd', NewUserAddresDelivery);
+        localStorage.setItem('user_cityd', NewUserCityDelivery);
         addresD.style.border = 'none';
         userAddresDelivery.setAttribute("readonly", "");
         userCityDelivery.setAttribute("readonly", "");
 
-        user_addresd = sessionStorage.getItem('user_addresd');
-        user_cityd = sessionStorage.getItem('user_cityd');
+        user_addresd = localStorage.getItem('user_addresd');
+        user_cityd = localStorage.getItem('user_cityd');
         document.getElementById("user_cityd").value = user_cityd;
         document.getElementById('user_addresd').value = user_addresd;
 

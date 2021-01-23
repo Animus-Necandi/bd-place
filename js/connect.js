@@ -1,12 +1,9 @@
 
-let connect = sessionStorage.getItem('user_connect');
 
 
-
-console.log(connect);
 
 function Connect() {
-    if (connect) {
+    if (localStorage.getItem('user_mail')) {
         window.event.returnValue = false;
         window.location = './panier.html';
     } else {
