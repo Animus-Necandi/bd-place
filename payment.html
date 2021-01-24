@@ -144,7 +144,7 @@
                         <p class="col-8">ADRESSE DE FACTURATION:</p>
                         <p class="edit billingEdit col-4" onclick="edit(billingEdit)">EDIT</p>
                         <div class="addres d-flex flex-column "id="b-addres">
-                            <input type="text" id="user_addres" class="user-addres col-8"
+                            <input type="text" id="user_address" class="user-addres col-8"
                              readonly >
                             <input type="text" id="user_city" class="user-addres col-8"
                             aria-required="true" readonly >
@@ -164,9 +164,9 @@
                         <div class="addres  d-flex flex-wrap "id="d-addres">
                             <span id='noDeliveryAddres'>Editer pour saisir votre adresse de Livraison</span>
                             <input type="text" id="user_addresd" class="user-addres col-8"
-                            value="user_addres" readonly >
+                            value="user_address" readonly >
                             <input type="text" id="user_cityd" class="user-addres col-8"
-                            value="user_addres" aria-required="true" readonly >
+                            value="user_address" aria-required="true" readonly >
                             
                             <span class='error' id='errorAddress'></span>
                          </div>
@@ -255,18 +255,21 @@
        
         user_address = localStorage.getItem('user_address');
         user_citys= localStorage.getItem('user_city');
+        document.getElementById("user_city").value = user_citys;
+        document.getElementById('user_address').value = user_address;
 
-        if(user_citys == null || user_address == null){
+        // if(user_citys == null || user_address == null){
+        //     console.log('test ici')
            
-            user_addres = "Editer pour saisir";
-            user_city = " votre adresse ";
+        //     user_addres = "Editer pour saisir";
+        //     user_city = " votre adresse ";
          
-        }
-        else if(user_citys && user_address){
+        // }
+        // else if(user_citys && user_address){
            
             user_addres = user_address;
             user_city = user_citys;
-        }
+        // }
 
 
         user_addresd =user_addres;
@@ -277,6 +280,8 @@
 
         localStorage.setItem('user_cityd',user_cityd);
         localStorage.setItem('user_addresd',user_addresd);
+
+       
 
         document.getElementById("user_cityd").value = user_cityd;
         document.getElementById('user_addresd').value = user_addresd;

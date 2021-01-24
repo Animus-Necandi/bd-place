@@ -42,7 +42,7 @@ function store() {
 function check() {
 
 
-    localStorage.setItem("user_addres", "N° et Nom de rue");
+    localStorage.setItem("user_address", "N° et Nom de rue");
     localStorage.setItem("user_city", "Code postal, Ville");
     let storedName = localStorage.getItem('user_mail');
     let storedPw = localStorage.getItem('user_password');
