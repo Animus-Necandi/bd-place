@@ -30,6 +30,8 @@ function store() {
     } else {
         localStorage.setItem('user_mail', usermail.value);
         localStorage.setItem('user_password', userpassword.value);
+        localStorage.setItem("user_address", "N° et Nom de rue");
+        localStorage.setItem("user_city", "Code postal, Ville");
         alert('Votre compte a bien été créé');
         location.href = './account.html';
         return false;
@@ -41,9 +43,11 @@ function store() {
 //checking
 function check() {
 
+    if (localStorage.getItem('user_address') == null || localStorage.getItem(user_city) == null) {
+        localStorage.setItem("user_address", "N° et Nom de rue");
+        localStorage.setItem("user_city", "Code postal, Ville");
+    }
 
-    localStorage.setItem("user_address", "N° et Nom de rue");
-    localStorage.setItem("user_city", "Code postal, Ville");
     let storedName = localStorage.getItem('user_mail');
     let storedPw = localStorage.getItem('user_password');
 
